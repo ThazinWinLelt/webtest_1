@@ -7,7 +7,6 @@ html, body {
     margin-left: 0em;
 }
 
-
 .nav-item-1 a {
     font-weight: bold;
     line-height: normal;
@@ -23,9 +22,9 @@ html, body {
     opacity: 1;
 }
 
-.nav-item-2{
+.nav-item-2 {
     padding-top: 0.3em;
-    padding-right: 0em: 
+    padding-right: 0em;
     opacity: 1;
     font-size: 12px;
     background-color: grey;
@@ -326,7 +325,7 @@ html, body {
     color: #000000;
 }
 
-.text-style-23{
+.text-style-23 {
     font-weight: bold;
     text-transform: uppercase;
     font-family: Helvetica;
@@ -336,7 +335,7 @@ html, body {
     color: #2CA1F8;
 }
 
-.text-style-24{
+.text-style-24 {
     font-weight: bold;
     /*font-size: 12px;*/
     line-height: 23px;
@@ -345,13 +344,38 @@ html, body {
     color: #000000;
 }
 
-.text-style-25{
+.text-style-25 {
     font-weight: bold;
     font-size: 9px;
     line-height: 48px;
     letter-spacing: 1.08px;
     color: #000000;
     transform: rotate(90deg);
+}
+
+.text-style-26 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    text-transform: lowercase;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+}
+
+.text-style-27 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+.text-style-28 {
+    font-size: 50px;
+    line-height: 66px;
+    color: #000000;
 }
 
 #service-section {
@@ -496,8 +520,13 @@ input {
 }
 
 .form-button-1 {
+    width: 200px;
     text-align: center;
     background: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 68px;
+    text-transform: uppercase;
     color: #FFFFFF;
 }
 
@@ -521,11 +550,21 @@ footer {
 }
 
 .jumbotron {
-    background-color: #FFFFFF;
-    text-align: justify;
+    background: #FFFFFF;
     padding-left: 0.7em;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.jumbotron-1 {
+    width: 420px;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    text-align: left;
+    background: #FFFFFF;
+    padding: 0 3em 3% 3em;
+    margin-top: 3em;
+    margin-left: 0.3em;
 }
 
 .about-section {
@@ -560,16 +599,16 @@ footer {
     margin-top: 9em;
 }
 
-.nav-body,.nav-icon a{
+.nav-body, .nav-icon a {
     font-size: 20px;
     color: #000000;
 }
 
-.nav-body{
+.nav-body {
     display: none;
 }
 
-#icon-1{
+#icon-1 {
     mix-blend-mode: normal;
     opacity: 0.3;
     color: #000000;
@@ -579,11 +618,61 @@ footer {
     padding: 1rem;
 }
 
-#vertical-navbar{
+#vertical-navbar {
     padding: 0px;
     margin: 0px;
     border: none;
     display: none;
+}
+
+.left-section {
+    /* width: 70%; */
+    margin-left: 2em;
+}
+
+.right-section {
+    /* width: 30%; */
+    position: absolute;
+    margin-right: 0px;
+    right: 3em;
+    top: 150px;
+}
+
+.bitmap-img-1 {
+    border-radius: 100%;
+    width: 230px;
+    height: 230px;
+    padding: 0;
+}
+
+.two-button {
+    margin-left: 0.3em;
+}
+
+#main-hr-1 {
+    display: none;
+}
+
+#new-section{
+    display: none;
+}
+
+.new-sec-btn{
+    display: block;
+    margin-top: 3rem;
+}
+
+#thales-blog-2{
+    display: none;
+}
+#thales-blog-1{
+    display: block;
+}
+#main-header-2{
+    display: none;
+}
+#main-header-1{
+    display: block;
 }
 
 /*---Media Queries --*/
@@ -600,18 +689,15 @@ footer {
         width: 20%;
         padding-top: 0;
     }
-
-    #horizontal-navbar{
+    #horizontal-navbar {
         display: none;
     }
-
-    #vertical-navbar{
+    #vertical-navbar {
         display: block;
         position: absolute;
         left: 0%;
     }
-
-    .vertical-navbar-top{
+    .vertical-navbar-top {
         display: block;
         padding-top: 4em;
         padding-left: 2em;
@@ -621,21 +707,15 @@ footer {
         -ms-transform: rotate(90deg);
         transform: rotate(90deg);
     }
-
-    .vertical-navbar-bottom{
+    .vertical-navbar-bottom {
         display: none;
         margin-top: 1em;
         margin-left: 1em;
     }
-        #dev,#com{
+    /* element disappear in small screen */
+    #dev, #com, .bitmap-img-1, .jumbotron-1, #motivo-job-post {
         display: none;
     }
-    /*.vnavbar-content{
-        padding: 0;
-        margin-top: 0px;
-        margin-left: 0px;
-        background-color: transparent;
-    }*/
 }
 
 /* 702 MD */
@@ -649,6 +729,9 @@ footer {
     .social-icon {
         display: none;
     }
+    #new-section{
+        display: block;
+    }
     .input-group {
         padding-right: 8em;
     }
@@ -660,6 +743,8 @@ footer {
     }
     #main-header-section {
         background-image: url("../img/bg.jpg");
+        padding: 0;
+        margin: 0;
     }
     #div-1 {
         padding-left: 0;
@@ -672,22 +757,57 @@ footer {
         margin-top: 0em;
         margin-left: 3em;
     }
-    .nav-icon{
+    .nav-icon {
         height: 300px;
         margin-left: 0px;
         background-color: black;
     }
-    .nav-body{
+    .nav-body {
         margin-top: 200px;
     }
-    .nav-icon a{
+    .nav-icon a {
         color: #FFFFFF;
     }
-    #icon-1{
+    #icon-1 {
         opacity: 1;
         color: #000000;
     }
+    .icon-2 {
+        font-family: Helvetica;
+        font-size: 80px;
+        line-height: normal;
+        color: #000000;
+        mix-blend-mode: normal;
+        opacity: 0.3;
+        transform: rotate(-180deg);
+    }
+    #main-hr-1 {
+        display: block;
+        padding: 0;
+        width: 1.5em;
+        margin-left: 0.3em;
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+    /* Job Post */
+    .text-style-1 {
+        font-size: 50px;
+        line-height: 90px;
+    }
+    #job-post {
+        display: none;
+    }
+    #thales-blog-2{
+        display: block;
+    }
+    #main-header-2{
+        display: block;
+    }
 
+    /* element disappear in pc screen */
+    #about-section,#explore,#thales-blog-1,#main-header-1 {
+        display: none;
+    }
 }
 
 /*---Firefox Bug Fix --*/
