@@ -278,7 +278,7 @@ html, body {
     font-weight: 500;
     line-height: normal;
     font-size: 14px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #000000;
     mix-blend-mode: normal;
     opacity: 0.5;
