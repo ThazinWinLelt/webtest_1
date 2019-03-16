@@ -3,7 +3,7 @@ html, body {
     width: 100%;
     font-family: Ubuntu;
     font-style: normal;
-    padding: 0 0 0 0;
+    padding: 0em;
     margin-left: 0em;
 }
 
@@ -15,11 +15,6 @@ html, body {
     mix-blend-mode: normal;
     opacity: 0.3;
     padding: 0 0.3em 0 0.3em;
-}
-
-.nav-item-1 a.active, #hr-pill-1 {
-    color: #FFFFFF;
-    opacity: 1;
 }
 
 .nav-item-2 {
@@ -76,9 +71,6 @@ html, body {
     border: 1.5px solid #000000;
     box-sizing: border-box;
     border-radius: 26px;
-    /* padding-left: 1em; */
-    /* padding-right: 1em; */
-    /* margin-right: 0.7em; */
     font-weight: bold;
     font-size: 10px;
     text-align: center;
@@ -113,6 +105,11 @@ html, body {
     margin-bottom: 0;
 }
 
+.bottom-btn {
+    position: absolute;
+    bottom: 0;
+}
+
 .line-5 {
     width: auto;
     mix-blend-mode: normal;
@@ -132,6 +129,11 @@ html, body {
 .sub-content-1 {
     width: 100%;
     padding: 1em 0 0.3em 0.7em;
+}
+
+.sub-content-2 {
+    width: 100%;
+    padding: 1em 0 0.3em 0;
 }
 
 .social a {
@@ -442,10 +444,10 @@ hr {
 
 .card {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-    overflow: hidden;
     border: 0px;
+    overflow: hidden;
 }
 
 .card .card-img {
@@ -459,7 +461,7 @@ hr {
 }
 
 .card-body {
-    max-height: 100%;
+    height: 100%;
 }
 
 .card-text {
@@ -472,6 +474,14 @@ hr {
     font-size: 11px;
     color: #FFFFFF;
     text-transform: uppercase;
+    margin-bottom: 0.3em;
+}
+
+.blog-post-2 {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 26px;
+    color: #FFFFFF;
 }
 
 .overlay-upper {
@@ -486,15 +496,15 @@ hr {
     padding-left: 0;
 }
 
-.social-list a {
+.social-list-1 a {
     color: #FFFFFF;
 }
 
-.social-list {
+.social-list-1 {
     display: none;
 }
 
-.social-list, .social-icon {
+.social-list-1, .social-icon {
     margin-right: 0;
 }
 
@@ -530,12 +540,6 @@ input {
     color: #FFFFFF;
 }
 
-.over {
-    position: relative;
-    left: 40%;
-    bottom: 80px;
-}
-
 .whole {
     display: none;
 }
@@ -569,7 +573,6 @@ footer {
 
 .about-section {
     margin-left: 0px;
-    /* margin-right: 0.5em; */
     padding: 0;
 }
 
@@ -586,17 +589,16 @@ footer {
 
 #div-1 {
     position: absolute;
-    width: 100%;
+    width: 95%;
     height: 100%;
     padding: 0;
-    margin: 0;
 }
 
 #div-2 {
     position: absolute;
-    width: 100%;
     height: 100%;
     margin-top: 9em;
+    padding: 0;
 }
 
 .nav-body, .nav-icon a {
@@ -653,26 +655,55 @@ footer {
     display: none;
 }
 
-#new-section{
+#new-section {
     display: none;
 }
 
-.new-sec-btn{
+.new-sec-btn {
     display: block;
     margin-top: 3rem;
 }
 
-#thales-blog-2{
+#thales-blog-2 {
     display: none;
 }
-#thales-blog-1{
+
+#thales-blog-1 {
     display: block;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0rem;
 }
-#main-header-2{
+
+#main-header-2 {
     display: none;
 }
-#main-header-1{
+
+#main-header-1 {
     display: block;
+}
+
+.social-list-2 {
+    display: none;
+    width: 100%;
+}
+
+.social-list-2 a {
+    background: lightgray;
+    width: 2em;
+    height: 2em;
+    color: #FFFFFF;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 2em;
+    display: inline-block;
+}
+
+.card-foot {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 1.2em;
 }
 
 /*---Media Queries --*/
@@ -712,8 +743,19 @@ footer {
         margin-top: 1em;
         margin-left: 1em;
     }
+    .nav-item-1 a.active {
+        color: #FFFFFF;
+        opacity: 1;
+    }
+    .nav-item-1 a.active .short-line-1 {
+        border: 2px solid #FFFFFF;
+        opacity: 1;
+    }
+    .card-text {
+        margin-bottom: 33em;
+    }
     /* element disappear in small screen */
-    #dev, #com, .bitmap-img-1, .jumbotron-1, #motivo-job-post {
+    #dev, #com, .bitmap-img-1, .jumbotron-1, #motivo-job-post, #bottom-btn-div, #service-sec-2, #service-sec-3, #service-btn-2, #slides-3 {
         display: none;
     }
 }
@@ -723,13 +765,10 @@ footer {
 /* 575 xs */
 
 @media (min-width: 699px) {
-    .social-list {
-        display: block;
-    }
-    .social-icon {
+    .social-list-1, .social-icon {
         display: none;
     }
-    #new-section{
+    #new-section {
         display: block;
     }
     .input-group {
@@ -738,7 +777,7 @@ footer {
     .whole {
         display: inline;
     }
-    .over, .under {
+    .under {
         display: none;
     }
     #main-header-section {
@@ -749,13 +788,12 @@ footer {
     #div-1 {
         padding-left: 0;
         margin-left: 0;
+        width: 3em;
         height: 100%;
     }
     #div-2 {
-        width: 100%;
-        height: 100%;
         margin-top: 0em;
-        margin-left: 3em;
+        left: 3em;
     }
     .nav-icon {
         height: 300px;
@@ -784,8 +822,8 @@ footer {
     #main-hr-1 {
         display: block;
         padding: 0;
-        width: 1.5em;
-        margin-left: 0.3em;
+        width: 2em;
+        margin-left: 0em;
         margin-top: 0em;
         margin-bottom: 0em;
     }
@@ -797,15 +835,135 @@ footer {
     #job-post {
         display: none;
     }
-    #thales-blog-2{
+    #thales-blog-2 {
         display: block;
     }
-    #main-header-2{
+    #main-header-2 {
         display: block;
     }
-
+    .overlay-bottom {
+        display: block;
+        position: absolute;
+        bottom: 58%;
+        left: 30%;
+    }
+    .blog-post-1 {
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 1.73333px;
+        color: #FFFFFF;
+        margin-bottom: 1em;
+    }
+    .blog-post-2 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 26px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .social-list-2 {
+        display: block;
+        position: absolute;
+        left: 1.2em;
+        bottom: 0;
+        margin-top: 1em;
+    }
+    #service-section {
+        background-image: none;
+        color: #000000;
+        text-align: center;
+    }
+    #service-sec-2, #service-sec-3 {
+        text-align: center;
+        color: #2B3247;
+    }
+    #service-btn-2 {
+        margin-right: 3em;
+        text-align: right;
+    }
+    .nav-item-1 a {
+        font-size: 30px;
+        line-height: 100px;
+        text-transform: uppercase;
+        padding: 0 0.3em 0 0.3em;
+        color: #8C93AA;
+        opacity: 0.2;
+    }
+    .nav-item-1 a.active {
+        color: #000000;
+        opacity: 1;
+    }
+    .nav-item-1 a.active .short-line-1 {
+        border: 2px solid #000000;
+        opacity: 1;
+    }
+    .short-line-1 {
+        width: 1.5em;
+    }
+    #service-btn-2 a {
+        mix-blend-mode: normal;
+        opacity: 0.3;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        border-radius: 26px;
+        font-size: 13px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000000;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .text-style-5 {
+        font-size: 38px;
+        text-align: left;
+    }
+    .text-style-6 {
+        text-align: left;
+        font-size: 25px;
+        text-transform: capitalize;
+    }
+    .text-style-7 {
+        text-align: left;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .text-style-11 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .text-style-8 {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: justify;
+        color: #8C93AA;
+    }
+    .short-line-2 {
+        width: 2em;
+        mix-blend-mode: normal;
+        opacity: 0.2;
+        background: #000000;
+        margin-left: 0px;
+    }
+    .short-line-3 {
+        width: 1.3em;
+        border: 3px solid #FFFFFF;
+        margin-bottom: 1em;
+        margin-left: 40%;
+    }
+    .card-text {
+        margin-bottom: 20em;
+    }
+    #employers {
+        margin-top: -6em;
+    }
+    .sub-content-1, #new-section {
+        padding: 3.5em 1em 1em 1em;
+    }
     /* element disappear in pc screen */
-    #about-section,#explore,#thales-blog-1,#main-header-1 {
+    #about-section, #explore, #thales-blog-1, #main-header-1, #services, #service-sec-1, #service-btn-1, #slides-2 {
         display: none;
     }
 }
