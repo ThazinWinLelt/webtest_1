@@ -58,11 +58,18 @@ html, body {
 }
 
 #round-btn-1 {
+    background: #2CA1F8;
     mix-blend-mode: normal;
-    box-sizing: border-box;
-    border-radius: 26px;
-    padding-left: 1em;
-    padding-right: 1em;
+    opacity: 0.8;
+    border-radius: 11px;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 #round-btn-2 {
@@ -105,6 +112,19 @@ html, body {
     margin-bottom: 0;
 }
 
+#dev-sm, #com-sm {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.33px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
 .bottom-btn {
     position: absolute;
     bottom: 0;
@@ -117,6 +137,15 @@ html, body {
     border: 1px solid #000000;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.line-6 {
+    width: 80%;
+    mix-blend-mode: normal;
+    opacity: 0.05;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .sub-header {
@@ -136,8 +165,8 @@ html, body {
     padding: 1em 0 0.3em 0;
 }
 
-.social a {
-    padding-left: 1rem;
+.social {
+    padding-left: 1em;
     color: lightgrey;
 }
 
@@ -157,6 +186,7 @@ html, body {
     line-height: normal;
     font-size: 24px;
     color: #2B3247;
+    text-align: center;
 }
 
 .text-style-3 {
@@ -165,6 +195,7 @@ html, body {
     font-size: 17px;
     mix-blend-mode: normal;
     opacity: 0.6;
+    text-align: center;
 }
 
 .text-style-4 {
@@ -432,6 +463,11 @@ hr {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
+}
+
+.short-line-5 {
+    margin-left: 50%;
+    margin-bottom: 5px;
 }
 
 #hr-pill-1 {
@@ -706,12 +742,24 @@ footer {
     right: 1.2em;
 }
 
+.carousel {
+    width: 100%;
+}
+
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
 /*---Media Queries --*/
 
 /* @media (max-width: 992px) {
   } */
 
-@media (max-width: 698px) {
+/* @media (max-width: 698px) { */
+
+@media (max-width: 575px) {
     .nav-body {
         position: absolute;
         top: 0%;
@@ -754,8 +802,19 @@ footer {
     .card-text {
         margin-bottom: 33em;
     }
+
+    #dev-sm{
+        position: absolute;
+        bottom: 60px;
+        left: 70px;
+    }
+    #com-sm{
+        position: absolute;
+        bottom: 15px;
+        left: 100px;
+    }
     /* element disappear in small screen */
-    #dev, #com, .bitmap-img-1, .jumbotron-1, #motivo-job-post, #bottom-btn-div, #service-sec-2, #service-sec-3, #service-btn-2, #slides-3 {
+    #dev-pc, #com-pc, .bitmap-img-1, .jumbotron-1, #motivo-job-post, #bottom-btn-div, #service-sec-2, #service-sec-3, #service-btn-2, #slides-3 {
         display: none;
     }
 }
@@ -764,7 +823,9 @@ footer {
 
 /* 575 xs */
 
-@media (min-width: 699px) {
+/* @media (min-width: 699px) { */
+
+@media (min-width: 576px) {
     .social-list-1, .social-icon {
         display: none;
     }
@@ -953,6 +1014,9 @@ footer {
         margin-bottom: 1em;
         margin-left: 40%;
     }
+    .short-line-5 {
+        margin-left: 0%;
+    }
     .card-text {
         margin-bottom: 20em;
     }
@@ -962,9 +1026,70 @@ footer {
     .sub-content-1, #new-section {
         padding: 3.5em 1em 1em 1em;
     }
+    .text-style-4 {
+        text-align: left;
+    }
+    .text-style-2 {
+        text-align: left;
+        font-size: 25px;
+    }
+    .text-style-3 {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+    }
+    .slide-box {
+        text-align: left;
+    }
+    .slide-box div {
+        padding: 1em;
+    }
+    .carousel-inner {
+        box-shadow: none;
+    }
+    .carousel-item {
+        padding-top: 0;
+        padding-bottom: 3em;
+        padding-left: 0;
+        padding-right: 0.5em;
+    }
+    .social {
+        padding-left: 0;
+    }
+    #round-btn-1 {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .line-6 {
+        width: auto;
+    }
     /* element disappear in pc screen */
-    #about-section, #explore, #thales-blog-1, #main-header-1, #services, #service-sec-1, #service-btn-1, #slides-2 {
+    #about-section, #explore, #thales-blog-1, #main-header-1, #services, #service-sec-1, #service-btn-1, #slides-2, #contact,#dev-sm,#com-sm {
         display: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-box div {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .slide-box div {
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slide-box div {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
